@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Escolar</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
+</head>
+
+<body>
+    <div class="imagem-fixa">
+        <div class="header">
+            <img src="https://images.pexels.com/photos/1148998/pexels-photo-1148998.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="Imagem da Escola">
+        </div>
+    </div>
+    <div class="conteudo-rolavel">
+        <div class="container">
+
+            <h1>Cadastro de Alunos</h1>
+            <form id="formAluno">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required onchange="mudou()"><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone"><br>
+
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" name="endereco" required><br>
+
+                <button type="button" id="btnAdicionarAluno">Adicionar Aluno</button>
+            </form>
+
+            <h2>Alunos Adicionados</h2>
+            <ul id="listaAlunos"></ul>
+        </div>
+
+        <div class="container">
+            <h1>Cadastro de Professores</h1>
+            <form id="formProfessor">
+                <label for="nomeProfessor">Nome:</label>
+                <input type="text" id="nomeProfessor" name="nomeProfessor" required><br>
+
+                <label for="diasAulas">Dias de Aulas:</label>
+                <input type="text" id="diasAulas" name="diasAulas" required><br>
+
+                <label for="cargaHoraria">Carga Horária:</label>
+                <input type="text" id="cargaHoraria" name="cargaHoraria" required><br>
+
+                <label for="contato">Contato:</label>
+                <input type="tel" id="contato" name="contato" required><br>
+
+                <button type="button" id="btnAdicionarProfessor">Adicionar Professor</button>
+                <button onclick="window.print()">Imprimir</button>
+            </form>
+
+            <h2>Professores Adicionados</h2>
+            <ul id="listaProfessores"></ul>
+           
+           
+        </div>
+       
+        <div class="container">
+            <h1>Lançamento de Notas</h1>
+            <form id="formNota">
+                <label for="nomeAlunoNota">Nome do Aluno:</label>
+                <input type="text" id="nomeAlunoNota" name="nomeAlunoNota" required><br>
+
+                <label for="nota1">Nota 1:</label>
+                <input type="number" id="nota1" name="nota1" required><br>
+
+                <label for="nota2">Nota 2:</label>
+                <input type="number" id="nota2" name="nota2" required><br>
+
+                <label for="nota3">Nota 3:</label>
+                <input type="number" id="nota3" name="nota3" required><br>
+
+                <label for="nota4">Nota 4:</label>
+                <input type="number" id="nota4" name="nota4" required><br>
+
+                <button type="button" id="btnLancarNota">Lançar Notas</button>
+            </form>
+
+            <h2>Progresso das Notas</h2>
+            <div id="progressoNotasContainer">
+                <div id="progressoNotas"></div>
+            </div>
+        </div>
+
+        <div class="container">
+            <h1>Lançamento de Frequência</h1>
+            <form id="formFrequencia">
+                <label for="semana1">Semana 1 (horas):</label>
+                <input type="number" id="semana1" name="semana1" min="0" max="12" required><br>
+
+                <label for="semana2">Semana 2 (horas):</label>
+                <input type="number" id="semana2" name="semana2" min="0" max="12" required><br>
+
+                <!-- ... insira os outros campos das semanas aqui ... -->
+                <label for="semana3">Semana 3 (horas):</label>
+                <input type="number" id="semana3" name="semana3" min="0" max="12" required><br>
+                <label for="semana4">Semana 4 (horas):</label>
+                <input type="number" id="semana4" name="semana4" min="0" max="12" required><br>
+                <label for="semana5">Semana 5 (horas):</label>
+                <input type="number" id="semana5" name="semana5" min="0" max="12" required><br>
+                <label for="semana6">Semana 6 (horas):</label>
+                <input type="number" id="semana6" name="semana6" min="0" max="12" required><br>
+                <label for="semana7">Semana 7 (horas):</label>
+                <input type="number" id="semana7" name="semana7" min="0" max="12" required><br>
+                <label for="semana8">Semana 8 (horas):</label>
+                <input type="number" id="semana8" name="semana8" min="0" max="12" required><br>
+                <label for="semana9">Semana 9 (horas):</label>
+                <input type="number" id="semana9" name="semana9" min="0" max="12" required><br>
+                <label for="semana10">Semana 10 (horas):</label>
+                <input type="number" id="semana10" name="semana10" min="0" max="12" required><br>
+
+                <button type="button" id="btnLancarFrequencia">Lançar Frequência</button>
+            </form>
+
+            <div id="barraProgressoFrequencia" style="width: 100%; background-color: #f3f3f3; margin-top: 20px;">
+                <div id="progressoFrequencia"
+                    style="width: 0%; height: 30px; background-color: green; text-align: center; line-height: 30px; color: white;">
+                </div>
+            </div>
+            <script src="./script.js"></script>
+        </div>
+</body>
+
+</html>
